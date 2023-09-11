@@ -8,6 +8,11 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 gymnasium = "^0.29.1"
+plotly = "^5.16.1"
+stable-baselines3 = { extras = ["extra"], version = "^2.1.0" }
+torch = "1.13"
+sb3-contrib = "^2.1.0"
+numpy = "1.22"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
@@ -104,8 +109,10 @@ addopts = [
 [tool.ruff]
 select = ["ALL"]
 ignore = [
-    "D211", # no-blank-line-before-class in favour of one-blank-line-before-class
-    "D213", # multi-line-summary-second-line in favour of multi-line-summary-first-line
+    "D211",   # no-blank-line-before-class in favour of one-blank-line-before-class
+    "D213",   # multi-line-summary-second-line in favour of multi-line-summary-first-line
+    "FBT001", # boolean-type-hint-positional-argument
+    "FBT002", # boolean-type-hint-positional-argument
 ]
 
 # Allow autofix for all enabled rules (when `--fix`) is provided.
