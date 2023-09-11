@@ -1,6 +1,8 @@
 *
 !rl_bin_packing
 !rl_bin_packing/*.py
+!rl_bin_packing/container
+!rl_bin_packing/container/*.py
 !rl_bin_packing/environments
 !rl_bin_packing/environments/*.py
 !tests
